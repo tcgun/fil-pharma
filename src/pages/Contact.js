@@ -17,12 +17,32 @@ const Contact = () => {
     }
   };
 
-  // Form verilerini göndermek için basit bir işlev
-  const handleSubmit = (e) => {
+  // Form verilerini göndermek için işlev
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form gönderim işlemleri burada yapılır
-    // Örneğin, bir API'ye istek atabilirsiniz
-    alert('Form gönderildi!');
+    try {
+      const response = await fetch('http://localhost:5000/contact', { // API'nin çalıştığı port
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName,
+          phone,
+          email,
+          message,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Form gönderildi!');
+      } else {
+        alert('Bir hata oluştu.');
+      }
+    } catch (error) {
+      console.error('Form gönderim hatası:', error);
+      alert('Bir hata oluştu.');
+    }
   };
 
   return (

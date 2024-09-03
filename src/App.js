@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Corporate from './pages/Corporate';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar /> {/* Navbar bileşenini buraya ekleyin */}
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/anasayfa" />} /> {/* Ana Sayfa */}
+          <Route path="/anasayfa" element={<Home />} />
+          <Route path="/urunler" element={<Products />} />
+          <Route path="/kurumsal" element={<Corporate />} />
+          <Route path="/iletisim" element={<Contact />} />
+        </Routes>
+        <Footer /> {/* Footer bileşenini buraya ekleyin */}
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,142 @@
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.service-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Daha koyu gölge */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Daha koyu gölge */
+    z-index: 1;
+}
+
+.service-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Opak arka plan */
+    z-index: -1; /* Metnin arkasında olacak şekilde */
+}
+
+.service-content h3, .service-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.service-content h3 {
+    font-size: 1.5rem; /* Başlık için daha büyük yazı boyutu */
+    font-weight: bold;
+}
+
+.service-content p {
+    font-size: 1rem; /* Açıklama için biraz daha küçük yazı boyutu */
+}
+
+.service-hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Daha koyu arka plan */
+    z-index: 2; /* Üstte görünmesi için z-index ekleyin */
+}
+
+.service-card:hover .service-hover-content {
+    opacity: 1;
+}
+
+.service-card:hover .service-content {
+    opacity: 0;
+}
+
+.service-card:nth-of-type(1) .service-hover-content {
+    background: linear-gradient(to right, #a8e6cf, #56cfe1); /* Daha koyu yeşil */
+}
+
+.service-card:nth-of-type(2) .service-hover-content {
+    background: linear-gradient(to right, #56cfe1, #3a86d1); /* Daha koyu mavi */
+}
+
+.service-card:nth-of-type(3) .service-hover-content {
+    background: linear-gradient(to right, #3a86d1, #1d4ed8); /* Daha koyu mavi */
+}
+
+.service-card:nth-of-type(4) .service-hover-content {
+    background: linear-gradient(to right, #1d4ed8, #1b2a49); /* En koyu mavi */
+}
+
+.service-hover-content p {
+    margin: 0; /* Yazı ortalanır ve okunaklı olur */
+    font-size: 1.2rem;
+    font-weight: bold; /* Yazı kalınlığı */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Yazının okunabilirliği için gölge */
+}
+
+/* Mobil uyumlu stil ayarları */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .service-content, .service-hover-content {
+        padding: 10px;
+    }
+
+    .service-hover-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-hover-content p {
+        font-size: 0.9rem;
+    }
+}

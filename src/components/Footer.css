@@ -1,0 +1,17 @@
+.footer {
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* Soldan sağa açılan mavi gradyan */
+    color: #333333; /* Koyu antrasit yazı rengi */
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    font-family: 'Exo 2', sans-serif; /* Fontu burada belirtin */
+}
+
+.footer-info p,
+.footer-links a {
+    color: #333333; /* Yazı rengi */
+    font-family: 'Exo 2', sans-serif; /* Fontu burada belirtin */
+}
+
+.footer-links a:hover {
+    color: #555555; /* Hover durumunda daha açık gri renk */
+}

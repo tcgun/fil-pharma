@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
 
                 <div className="text-center text-[#f4f3f0] mt-8">
-                    &copy; {new Date().getFullYear()} Fil Pharma Medikal. Tüm hakları saklıdır.
+                    &copy; {new Date().getFullYear()} Fil Pharma Medikal - Tüm hakları saklıdır.
                 </div>
             </div>
         </footer>

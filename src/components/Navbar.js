@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-import './Navbar.css'; // CSS dosyasını içe aktarın
-import logo from '../assets/images/logo.png'; // Logo görseli
+import './Navbar.css';
+import logo from '../assets/images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons'; // Doğru paket
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    // Menü durumunu yönetmek için state
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Menü açma/kapama fonksiyonu
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
     };
 
-    // Menü öğelerine tıklanınca menüyü kapatma fonksiyonu
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
@@ -25,8 +22,11 @@ const Navbar = () => {
             {/* Üst Kısım */}
             <div className="navbar-top">
                 <div className="navbar-social">
-                    <Link to="/anasayfa">
-                        <FontAwesomeIcon icon={faHome} />
+                    <Link to="/anasayfa" className="navbar-home-link">
+                        <div className="home-link-content">
+                            <span className="home-text">Ana Sayfa</span>
+                            <FontAwesomeIcon icon={faHome} />
+                        </div>
                     </Link>
                     <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faWhatsapp} />
@@ -48,10 +48,10 @@ const Navbar = () => {
 
             {/* Ana Navbar */}
             <nav className="navbar">
-                <div className="navbar-logo">
+                <Link to="/anasayfa" className="navbar-logo">
                     <img src={logo} alt="Fil Pharma Logo" />
-                    <span className="navbar-logo-text">Fil Pharma Medikal</span>
-                </div>
+                    <span className="navbar-logo-text">Fil Pharma</span>
+                </Link>
                 <div className="navbar-hamburger" onClick={toggleMenu}>
                     ☰
                 </div>

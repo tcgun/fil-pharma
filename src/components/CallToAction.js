@@ -16,10 +16,10 @@ const CallToAction = () => {
       {/* Ana içerik */}
       <div className="relative z-10 px-8">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-8 leading-tight">
-          Bayimiz olmak ve ürünlerimiz hakkında bilgi almak için bizimle hemen iletişime geçin.
+          Ürünlerimiz hakkında bilgi almak ve işbirliği fırsatlarını keşfetmek için bizimle iletişime geçin.
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          Bizimle hemen iletişime geçmek isterseniz aşağıdaki seçenekleri kullanabilirsiniz.
+          Size nasıl yardımcı olabileceğimiz konusunda detaylı bilgi almak ve profesyonel destek için bizimle iletişime geçin.
         </p>
         <div className="flex justify-center mb-6">
           <Link to="/iletisim">
@@ -27,7 +27,7 @@ const CallToAction = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
               </svg>
-              <span>Bizimle İletişime Geçin</span>
+              <span>İletişime Geçin</span>
             </button>
           </Link>
         </div>

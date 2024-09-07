@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '../components/Hero';
+import Info from '../components/Info';
 import Services from '../components/Services';  // Hizmet Kartları
 import CallToAction from '../components/CallToAction';  // Dikkat Çekici Mesaj
+import ProductInfo from '../components/ProductInfo'; // Ürün Bilgileri
+import ExtraInfo from '../components/ExtraInfo'; // Ürün Bilgileri
 
 const Home = () => {
   return (
@@ -17,6 +20,9 @@ const Home = () => {
         <meta property="og:url" content="https://fil-pharma.vercel.app/anasayfa" />
       </Helmet>
       <Hero />
+      <ProductInfo /> {/* Ürün Bilgileri Bölümü */}
+      <ExtraInfo /> {/* Ürün Bilgileri Bölümü */}
+      <Info />
       <Services /> {/* Hizmet Kartları Bölümü */}
       <CallToAction /> {/* Dikkat Çekici Mesaj Bölümü */}
     </div>

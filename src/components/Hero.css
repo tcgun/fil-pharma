@@ -1,13 +1,14 @@
 /* Genel Hero stil */
 .hero {
   position: relative;
-  height: 100vh;
-  width: 100%; /* Tam genişlik */
+  height: 720px; /* Yükseklik 720 piksel */
+  width: 1280px; /* Genişlik 1280 piksel */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000; /* Arka plan rengini siyah yaparak, resimlerin daha iyi görünmesini sağlar */
+  background-color: #000; /* Siyah arka plan */
+  margin: 20px auto 0; /* Üstten 20px boşluk, ortalamak için margin ekle */
 }
 
 /* Hero slide */
@@ -31,24 +32,24 @@
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
   padding: 20px;
-  border-radius: 8px; /* Daha yuvarlak köşeler */
+  border-radius: 8px;
   max-width: 90%;
   text-align: center;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Daha belirgin gölge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Gölge efekti */
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 700; /* Daha kalın yazı tipi */
+  font-weight: 700;
 }
 
 .hero-text p {
   font-size: 1.25rem;
-  line-height: 1.6; /* Daha iyi okunabilirlik için satır yüksekliği */
+  line-height: 1.6; /* Satır aralığı iyileştirme */
 }
 
 /* Slider butonları */
@@ -59,29 +60,39 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   border: none;
-  padding: 12px;
+  width: 50px;  /* Buton genişliği */
+  height: 50px; /* Buton yüksekliği */
   cursor: pointer;
   font-size: 2rem;
   z-index: 10;
-  border-radius: 50%; /* Yuvarlak buton */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 50%; /* Tam daire */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Okları ortala */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gölge */
 }
 
 .slider-button.prev {
-  left: 15px;
+  left: 15px; /* Sol buton konumu */
 }
 
 .slider-button.next {
-  right: 15px;
+  right: 15px; /* Sağ buton konumu */
 }
 
 .slider-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  transform: scale(1.1); /* Hover efekti için buton büyütme */
+  background-color: rgba(0, 0, 0, 0.7); /* Hover sırasında renk değişimi */
 }
 
 /* Responsive stil */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
+  .hero {
+    width: 100%; /* Küçük ekranlarda genişlik %100 */
+    height: auto; /* Yüksekliği otomatik ayarla */
+    padding-top: 56.25%; /* 16:9 oranını korumak için */
+  }
+
   .hero-text {
     bottom: 10px;
     padding: 15px;
@@ -98,7 +109,8 @@
 
   .slider-button {
     font-size: 1.5rem;
-    padding: 8px;
+    width: 40px;
+    height: 40px; /* Küçük ekranlarda boyut küçültüldü */
   }
 }
 
@@ -119,6 +131,7 @@
 
   .slider-button {
     font-size: 1.25rem;
-    padding: 6px;
+    width: 35px; /* Daha küçük ekranlar için genişlik ayarlandı */
+    height: 35px; /* Daha küçük ekranlar için yükseklik ayarlandı */
   }
 }

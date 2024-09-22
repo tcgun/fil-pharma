@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 25px; /* Sağ ve sol boşlukları ayarladık */
     background-color: #f8f8f8;
 }
 
@@ -18,7 +18,7 @@ body {
     align-items: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px; /* Daha dengeli yazı boyutu */
 }
 
 .home-link-content {
@@ -36,7 +36,7 @@ body {
 .navbar-social {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px; /* Daha estetik boşluk */
     margin-left: auto;
 }
 
@@ -45,7 +45,7 @@ body {
     font-size: 20px;
     text-decoration: none;
     border-right: 1px solid #ddd;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 .navbar-social a:last-child {
@@ -64,7 +64,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 25px; /* Sağ ve sol boşluk ayarlandı */
     z-index: 1000;
 }
 
@@ -75,12 +75,12 @@ body {
 }
 
 .navbar-logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 80px; /* Logoyu küçülttük */
+    margin-right: 10px; /* Logo ve yazı arasındaki boşluk */
 }
 
 .navbar-logo-text {
-    font-size: 30px;
+    font-size: 40px; /* Logo yazısını küçülttük */
     font-weight: bold;
     color: #333;
 }
@@ -93,7 +93,7 @@ body {
 .navbar-menu a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 16px; /* Menü yazı boyutu dengelendi */
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -130,7 +130,7 @@ body {
     .navbar-top {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px;
+        padding: 10px 20px;
     }
 
     .navbar-home-link {
@@ -166,7 +166,7 @@ body {
     }
 
     .navbar-logo-text {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .navbar-hamburger {
